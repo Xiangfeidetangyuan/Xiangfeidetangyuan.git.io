@@ -152,28 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-方便linux的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/07/test/">test</a>
+      <a class="article-title" href="/2020/04/21/%E6%96%B9%E4%BE%BFlinux%E7%9A%84%E4%BD%BF%E7%94%A8/">方便linux的使用</a>
     </h1>
   
 
         
-        <a href="/2020/04/07/test/" class="archive-article-date">
-  	<time datetime="2020-04-07T03:53:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
+        <a href="/2020/04/21/%E6%96%B9%E4%BE%BFlinux%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-04-21T11:51:26.412Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p><img src="/2020/04/07/test/image-20200407112349438.png" alt="image-20200407112349438"></p>
+        <p>下面分享几个可以提升Linux使用流畅的小技巧</p>
+<h1 id="1-linux改源"><a href="#1-linux改源" class="headerlink" title="1 linux改源"></a>1 linux改源</h1><p>为了提高下载速度，这里更改源下载地址为阿里的</p>
+<p>下面是整个source文件，可直接替换掉</p>
+<blockquote>
+<p>**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial main restricted</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates main restricted</span><br><span class="line">&gt;deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial universe</span><br><span class="line">&gt;deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates universe</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial multiverse</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates multiverse**</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu xenial partner</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security main restricted</span><br><span class="line">&gt;deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security universe</span><br><span class="line">&gt; deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security multiverse</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security main restricted multiverse universe #Added by software-properties</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial main restricted #Added by software-properties</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial main restricted multiverse universe #Added by software-properties</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates main restricted multiverse universe #Added by software-properties</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse #Added by software-properties</span><br><span class="line">&gt; deb [arch&#x3D;amd64] https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;ubuntu xenial stable</span><br><span class="line">&gt;</span><br><span class="line">&gt; deb-src [arch&#x3D;amd64] https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;ubuntu xenial stable</span><br><span class="line">&gt;</span><br><span class="line">&gt; deb-src http:&#x2F;&#x2F;archive.canonical.com&#x2F;ubuntu xenial partner</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="2-设置共享文件夹"><a href="#2-设置共享文件夹" class="headerlink" title="2 设置共享文件夹"></a>2 设置共享文件夹</h1><p>   设置共享文件夹就可以不用通过邮箱等传递文件了<br><img src="https://img-blog.csdnimg.cn/20200421194625203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hpYW5nRmVpRGU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200421194654586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hpYW5nRmVpRGU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>5.进入虚拟机，安装VMware Tools</p>
+<p><img src="https://img-blog.csdnimg.cn/20200421194749567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hpYW5nRmVpRGU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200421194811697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hpYW5nRmVpRGU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>然后右键用终端打开。也可以先将其拷贝到linux里面，然后进入该目录</p>
+<p>6.解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf VMwareTools-10.1.15-6627299.tar.gz</span><br><span class="line">cd vmware-tools-distrib&#x2F;</span><br><span class="line">.&#x2F;vmware-install.pl</span><br></pre></td></tr></table></figure>
 
+
+
+<p>7.至此，在/mnt/hgfs/下应该就能看到刚才在虚拟机中设置的windows下的共享文件夹share了</p>
+<p>8.最好创建一个软连接到home目录，方便进入共享目录</p>
+<p> 如，新建ishare文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;mnt&#x2F;hgfs</span><br><span class="line">ln -s &#x2F;mnt&#x2F;hgfs&#x2F;share&#x2F; ~&#x2F;ishare</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="3-vim合理使用"><a href="#3-vim合理使用" class="headerlink" title="3.vim合理使用"></a>3.vim合理使用</h1><p><strong>4.1**</strong>普通模式**</p>
+<ul>
+<li>G用于直接跳转到文件尾</li>
+<li>ZZ用于存盘退出Vi</li>
+<li>ZQ用于不存盘退出Vi</li>
+<li>/和？用于查找字符串</li>
+<li>n继续查找下一个</li>
+<li>yy复制一行</li>
+<li>p粘帖在下一行，P粘贴在前一行</li>
+<li>dd删除一行文本</li>
+<li>x删除光标所在的字符</li>
+<li>u取消上一次编辑操作（undo）</li>
+</ul>
+<p><strong>4.2**</strong>插入模式**</p>
+<p>在 Normal 模式下输入插入命令 i、 a 、 o进入insert模式。用户输入的任何字符都被vim<strong>当做文件内容保存起来</strong>，并将其显示在屏幕上。</p>
+<ul>
+<li>在文本输入过程中，若想回到Normal模式下，按 Esc 键即可。</li>
+</ul>
+<p><strong>4.3**</strong>命令行模式**</p>
+<p>Normal 模式下，用户按冒号 :即可进入 Command 模式，此时 vim 会在显示窗口的最后一行 (屏幕的最后一行) 显示一个 “:” 作为 Command 模式的提示符，等待输入命令。</p>
+<ul>
+<li>:w 保存当前编辑文件，但并不退出</li>
+<li>:w newfile 存为另外一个名为 “newfile” 的文件</li>
+<li>:wq 用于存盘退出Vi</li>
+<li>:q! 用于不存盘退出Vi</li>
+<li>:q用于直接退出Vi （未做修改）</li>
+</ul>
+<p><strong>设置Vi环境:</strong></p>
+<ul>
+<li><p>:set     autoindent 缩进,常用于程序的编写</p>
+</li>
+<li><p>:set     noautoindent 取消缩进</p>
+</li>
+<li><p>:set number 在编辑文件时显示行号</p>
+</li>
+<li><p>:set nonumber     不显示行号</p>
+</li>
+<li><p>:set     tabstop=value 设置显示制表符的空格字符个数</p>
+</li>
+<li><p>:set 显示设置的所有选项</p>
+</li>
+<li><p>:set all 显示所有可以设置的选项</p>
+</li>
+</ul>
+<h1 id="4-不要随便扩容，容易失败"><a href="#4-不要随便扩容，容易失败" class="headerlink" title="4.不要随便扩容，容易失败"></a>4.不要随便扩容，容易失败</h1>
       
 
       
@@ -185,7 +253,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/07/test/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/04/21/%E6%96%B9%E4%BE%BFlinux%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
         </p>
       
 
